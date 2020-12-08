@@ -21,12 +21,7 @@ module.exports = {
   },
   plugins: [...common.plugins],
   devServer: {
-    contentBase: path.join(__dirname, "..", "..", "public"),
+    contentBase: path.join(__dirname, "..", "..", "docs"),
     port: process.env.HMR_PORT || "8888",
-    hot: true,
-    inline: true,
-    quiet: false,
-    noInfo: true,
-    stats: { colors: true },
   },
 };

@@ -22,13 +22,23 @@ const resolve = {
 
 const entry = ["./src/index.tsx"];
 
-const output = (isProd) => ({
-  path: path.resolve("docs", "assets"),
-  filename: isProd ? "[name].[hash].js" : "[name].js",
-  hotUpdateChunkFilename: ".hot/[id].[hash].hot-update.js",
-  hotUpdateMainFilename: ".hot/[hash].hot-update.json",
-  publicPath: "/assets/",
-});
+const output = (isProd) => {
+  const baseConfig = {
+    path: path.resolve("docs", "assets"),
+    filename: isProd ? "[name].[hash].js" : "[name].js",
+    hotUpdateChunkFilename: ".hot/[id].[hash].hot-update.js",
+    hotUpdateMainFilename: ".hot/[hash].hot-update.json",
+  };
+
+  if (isProd) {
+    return baseConfig;
+  } else {
+    return {
+      ...baseConfig,
+      publicPath: "/assets/",
+    };
+  }
+};
 
 const rules = (isProd) => {
   const cfg = {
