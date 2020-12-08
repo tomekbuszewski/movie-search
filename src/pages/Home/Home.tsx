@@ -1,5 +1,5 @@
 import * as React from "react";
-import { ChangeEvent } from "react";
+import { ChangeEvent, FormEvent } from "react";
 
 import { ISearchResultsPayload } from "@contracts/searchResultPayload.dto";
 import { SearchEngine } from "@services/search";
@@ -19,7 +19,9 @@ const Home: React.FC = () => {
     ISearchResultsPayload
   >();
 
-  const search = () => {
+  const search = (event: FormEvent) => {
+    event.preventDefault();
+
     if (searchQuery.length >= 3) {
       setError(undefined);
       setFetchState(FETCH_STATE.FETCHING);

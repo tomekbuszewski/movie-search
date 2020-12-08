@@ -1,5 +1,5 @@
 import * as React from "react";
-import { ChangeEvent } from "react";
+import { ChangeEvent, FormEvent } from "react";
 import { Input } from "@ui/Atoms";
 import { FETCH_STATE, HOME_PAGE_TEST_IDS } from "./Home.types";
 import { SearchResults } from "@containers/SearchResults";
@@ -9,7 +9,7 @@ interface Props {
   onSearchChange: (event: ChangeEvent<HTMLInputElement>) => void;
   fetchState: FETCH_STATE;
   searchResults?: ISearchResultsPayload;
-  searchTrigger: () => void;
+  searchTrigger: (e: FormEvent) => void;
   error?: string;
 }
 
