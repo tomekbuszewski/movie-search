@@ -9,8 +9,8 @@ import { theme } from "@ui/theme";
 import { movieSearchErrorHandler, handlers } from "@mocks/handlers";
 import { Home } from "@pages/Home";
 import { HOME_PAGE_TEST_IDS } from "@pages/Home/Home.types";
-import { SEARCH_RESULTS_TEST_IDS } from "@containers/SearchResults/SearchResult.types";
 import results from "@mocks/searchResults";
+import { SEARCH_RESULTS_TEST_IDS } from "@containers/SearchResults/SearchResults.types";
 
 const server = setupServer(...handlers);
 

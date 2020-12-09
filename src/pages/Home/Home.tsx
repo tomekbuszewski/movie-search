@@ -7,7 +7,7 @@ import { FETCH_STATE } from "./Home.types";
 
 import { View } from "./Home.view";
 
-const engine = new SearchEngine();
+const engine = new SearchEngine<ISearchResultsPayload>();
 
 const Home: React.FC = () => {
   const [error, setError] = React.useState<string>();

@@ -34,5 +34,12 @@ For developing this app, I’ve chosen Storybook for UI and Plop for code genera
 
 Apart from this, there is ESLint and Prettier used in order to maintain a steady code standards with proper formatting.
 
+## TODO
+
+- implement minor cache for searching;
+- move texts to a separate file;
+- have a better pipeline for deployment;
+- add import ordering to ESLint;
+
 [1]:	https://tomekbuszewski.github.io/movie-search/#/
 [2]:	https://github.com/tomekbuszewski/ts-react-starter
